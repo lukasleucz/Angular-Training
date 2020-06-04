@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "course-manager"
+    }
+  },
+  "defaultProject": "course-manager",
+  "cli": {
+    "analytics": "4282e261-457d-4c8f-bab0-ce9d82e96412"
+  }
 }
