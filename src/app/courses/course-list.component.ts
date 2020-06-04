@@ -1,11 +1,41 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Course} from './course';
 
 @Component ({
     selector: 'app-course-list',
-    template: '<h2> Course List </h2>'
+    templateUrl: './course-list.component.html'
 })
-export class CourseListComponent {
+export class CourseListComponent implements OnInit{
+
+    courses: Course[] = [];
+
+    //Tarefas para inicialização do componente
+    ngOnInit(): void { 
+        this.courses = [
+            {
+                id: 1,
+                name: 'Angular: Forms',
+                imageUrl: '',
+                price: 99.99,
+                code: 'XPS-8796',
+                duration: 120,
+                rating: 5.4,
+                releaseDate: 'November, 2, 2019'
+            },
+            {
+                id: 2,
+                name: 'Angular: HTTP',
+                imageUrl: '',
+                price: 45.99,
+                code: 'LKL-9898',
+                duration: 90,
+                rating: 4,
+                releaseDate: 'December, 25, 2019'            
+            }
+        ]
+            
+    }
+}
     
 
     
-}
