@@ -21,15 +21,17 @@ export class CourseService {
         return this.httpClient.get<Course>(`${this.coursesUrl}/${id}`);
     }
 
-        save(course: Course): Observable<Course> {
+    save(course: Course): Observable<Course> {
         if(course.id) {
             return this.httpClient.put<Course>(`${this.coursesUrl}/${course.id}`, course);
         } else {
             return this.httpClient.post<Course>(`${this.coursesUrl}`, course);//back end implementa ID, cria um novo item.
-        }
-
+        } 
     }
 
+    deleteById(id: number): Observable<any> {
+        return this.httpClient.delete<any>(`${this.coursesUrl}/${id}`);
+    }
 
 }
 

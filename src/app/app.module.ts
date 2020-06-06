@@ -23,7 +23,6 @@ import { CourseInfoComponent } from './courses/course-info.component';
     NavBarComponent,
     Error404Component,
     CourseInfoComponent
-
   ],
   imports: [
     BrowserModule,
